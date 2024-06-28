@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesoem -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- Render All CSS Elements -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!-- Google Fonts => Poppins  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100;200;300;400;500;600;700;800;900&family=Cairo:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div class="dashboard" id="dashboard">
+        <div class="sidebar vh-100">
+            <h1 class="logo m-0">Logo</h1>
+
+            <ul>
+                <li class="py-3"><a class="active" href=""><i class="fa-solid fa-tractor"></i><span>New farm</span></a></li>
+                <li class="py-3"><a href=""><i class="fa-solid fa-tractor"></i><span>Your farms</span></a></li>
+                <li class="py-3"><a href=""><i class="fa-solid fa-tractor"></i><span>Profile</span></a></li>
+                <li class="py-3"><a href=""><i class="fa-solid fa-tractor"></i><span>Contact</span></a></li>
+            </ul>
+        </div>
+
+        <div class="body-dash">
+            <nav>
+                <div class="">
+                    <button class="btn" data-target="#dashboard" data-btn ><i class="fa-solid fa-bars"></i></button>
+                </div>
+
+                <div class="user-account">
+                    <a href="#">
+                        <img src="images/user_149071.png" alt="user image">
+                        <span class="username">Khaled</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div> -->
+
+    <input type="checkbox" id="dash-check" />
+    <header>
+      <nav id="navbar" class="dash-nav d-flex justify-content-between align-items-center">
+        <label for="check">
+          <i class="fa fa-bars sidebar_btn_dash" id="sidebar_btn_dash" aria-hidden="true"></i>
+        </label>
+
+        <a href="#" class="dark-mode text-center"><img src="./images/moon.png" id="dark-icon" alt="dark-mode-icon"></i></i></a>
+
+        <div class="">
+          <ul class="m-0 p-0 d-flex">
+            <a href="#" class="nav__el d-flex align-items-center">
+              <img src="images/user_149071.png" alt="user photo" class="nav__user-img"/>
+              <span class="user-name">Khaled</span>
+            </a>
+          </ul>
+        </div>
+        
+      </nav>
+    </header>
+
+    <div class="dash-side-bar">
+      <center>
+        <h4>Khaled hosny</h4>
+        <h6>Admin</h6>
+      </center>
+      <a href="#" id="createFarmBtnSidebar"><i class="fa-solid fa-display" style="color: #0fbf53;"></i><span>Create farm</span></a>
+      <a href="#" id="accountSettingBtnSidebar"><i class="fa-solid fa-user" style="color: #0fbf53;"></i><span>profile</span></a>
+      <a href="#" id="showFarmBtnSidebar"><i class="fa-solid fa-tractor" style="color: #0fbf53;"></i><span>farms</span></a>
+      <a href="#" id="showUsersBtnSidebar"><i class="fa-solid fa-users" style="color: #0fbf53;"></i><span>Manage users</span></a>
+      <a href="#"><i class="fa-solid fa-bars-progress" style="color: #0fbf53;"></i><span>Manage farms</span></a>
+      <a href="#" class="dash-logout fw-bold fs-5"><i class="fa-solid fa-right-from-bracket" style="color: #0fbf53;"></i><span>Logout</span></a>
+    </div>
+
+    <div class="dash-content position-relative">
+      <div class="content-body">
+        
+        <div class="container">
+            
+            <div class="welcome-dash animate__animated animate__fadeInLeft">
+                <h1 class="py-2 fw-semibold">Welcome Khaled,</h1>
+                <h2 class="py-3 fw-semibold">Lets start build <span class="fw-bolder">Our Farm</span></h2>
+                <button class="signup-btn w-25 m-0" id="welcomeDashBtn">Create Farm</button>
+
+            </div>
+
+            <div class="account-setting-dash animate__animated animate__fadeInLeft">
+              <h3>YOUR ACCOUNT SETTINGS</h3>
+              <div class="row gx-3">
+                <div class="col-5 position-relative">
+                  
+                    <form action="" class="setting-info">
+                      <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" value="Khaled Hosny" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" value="khaledhosny122@gmail.com" required>
+                      </div>
+
+                      <div class="form-group d-flex align-items-center">
+                        <img src="images/user_149071.png" alt="your photo">
+                        <input type="file" name="myphoto" id="myphoto" class="your-photo-upload " accept="image/*" />
+                      </div>
+
+                      <div class="text-end">
+                        <button class="signup-btn">save settings</button>
+                      </div>
+
+                    </form>
+                  
+                </div>
+
+                <div class="col-1 position-relative">
+                  <div class="text-center">
+                    <div class="vertical-line-dash"></div>
+                  </div>
+                </div>
+
+                <div class="col-5 position-relative">
+                  
+                    <form action="" class="setting-info">
+                      <div class="form-group">
+                        <label for="current-password">Current password</label>
+                        <input type="password" id="current-password" name="current-password" placeholder="••••••••" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="new-password">New password</label>
+                        <input type="password" id="new-password" name="new-password" placeholder="••••••••" required>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="confirm-password">Confirm password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="••••••••" required>
+                      </div>
+
+                      <div class="text-end">
+                        <button class="signup-btn">save password</button>
+                      </div>
+
+                    </form>
+                  
+                </div>
+              </div>
+            </div>
+            
+            <div class="create-farm animate__animated animate__fadeInLeft">
+              <div class="step-row-farm-creation">
+                <div id="progressFarmStep" class="farm-creation-progress with-after"></div>
+                <div class="step-col-farm-creation"><small>Step 1</small></div>
+                <div class="step-col-farm-creation"><small>Step 2</small></div>
+                <div class="step-col-farm-creation"><small>Step 3</small></div>
+              </div>
+              <form action="" class="w-100 form-container">
+                <div id="FormStep1" class="animate__animated animate__fadeInLeft">
+                  <h3>What is your farm name ?</h3>
+                  <input type="text" placeholder="Enter farm name" />
+                  <div class="btn-box">
+                  <button class=" signup-btn w-25 mx-0 my-5 next-step" id="nextStep1">
+                      next
+                  </button>
+                  </div>
+                </div>
+
+                <div id="FormStep2" class="animate__animated animate__fadeInLeft">
+                  <h3>What is your farm location ?</h3>
+                  <input type="text" placeholder="langitude" />
+                  <input type="text" placeholder="magnitude" />
+                  <div class="btn-box">
+                  <button class=" signup-btn w-25 mx-0 my-5 next-step" id="backStep1"> back </button>
+                  <button class=" signup-btn w-25 mx-0 my-5 prev-step" id="nextStep2"> next </button>
+                  </div>
+                </div>
+
+                <div id="FormStep3" class="animate__animated animate__fadeInLeft" >
+                  <h3>What is your farm location ?</h3>
+                  <input type="text" placeholder="langitude" />
+                  <input type="text" placeholder="magnitude" />
+                  <input type="text" placeholder="magnitude" />
+                  <div class="btn-box">
+                  <button class=" signup-btn w-25 mx-0 my-5 prev-step" id="backStep2"> back </button>
+                  <button class=" signup-btn w-25 mx-0 my-5 " id="">submit</button>
+                  </div>
+                </div>
+              </form>
+    
+            </div>
+
+            <div class="Show-farms-dash animate__animated animate__fadeInLeft">
+              <div class="row g-3">
+  
+                <div class="col-4">
+                  <div class="farm-content">
+                    <div class="farm-img">
+                      <img src="images/location-farm.avif" alt="farm-location">
+                    </div>
+                    <div class="farm-info">
+                      <h4>Farm Info</h4>
+                      <div class="row text-center">
+                        <div class="col-6">
+                          name: farm name
+                        </div>
+                        <div class="col-6">
+                          Created At: date
+                        </div>
+                        <div class="col-6">
+                          Crop: Rice
+                        </div>
+                        <div class="col-6">
+                          City: fayoum
+                        </div>
+                      </div>
+                    </div>
+                    <div class="farm-btn d-flex justify-content-center align-items-center">
+                      <button class="signup-btn">Details</button>
+                    </div>
+                  </div>
+  
+                </div>
+  
+                <div class="col-4">
+                  <div class="farm-content">
+                    <div class="farm-img">
+                      <img src="images/location-farm.avif" alt="farm-location">
+                    </div>
+                    <div class="farm-info">
+                      <h4>Farm Info</h4>
+                      <div class="row text-center">
+                        <div class="col-6">
+                          name: farm name
+                        </div>
+                        <div class="col-6">
+                          Created At: date
+                        </div>
+                        <div class="col-6">
+                          Crop: Rice
+                        </div>
+                        <div class="col-6">
+                          City: fayoum
+                        </div>
+                      </div>
+                    </div>
+                    <div class="farm-btn d-flex justify-content-center align-items-center">
+                      <button class="signup-btn">Details</button>
+                    </div>
+                  </div>
+  
+                </div>
+  
+                <div class="col-4">
+                  <div class="farm-content">
+                    <div class="farm-img">
+                      <img src="images/location-farm.avif" alt="farm-location">
+                    </div>
+                    <div class="farm-info">
+                      <h4>Farm Info</h4>
+                      <div class="row text-center">
+                        <div class="col-6">
+                          name: farm name
+                        </div>
+                        <div class="col-6">
+                          Created At: date
+                        </div>
+                        <div class="col-6">
+                          Crop: Rice
+                        </div>
+                        <div class="col-6">
+                          City: fayoum
+                        </div>
+                      </div>
+                    </div>
+                    <div class="farm-btn d-flex justify-content-center align-items-center">
+                      <button class="signup-btn">Details</button>
+                    </div>
+                  </div>
+  
+                </div>
+  
+              </div>
+            </div>
+            
+            <div class="Show-users-dash animate__animated animate__fadeInLeft">
+             
+              <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Contact</th>
+                            <th>Country</th>
+                            <th>Update</th>
+                            <th>delete</th>
+                            
+                          </tr>
+                    </thead>
+                      
+                    <tbody>
+                        <tr>
+                            <td>Alfreds Futterkiste</td>
+                            <td>Maria Anders</td>
+                            <td>Germany</td>
+                            <td>
+                                <button class="btn btn-success">Update</button>
+                            </td>
+                            <td>
+                                <button class="btn btn-danger">Delete</button>
+                            </td>
+                          </tr>
+                    </tbody>
+    
+                </table>
+            </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/dashboard.js"> </script>
+  </body>
+</html>
