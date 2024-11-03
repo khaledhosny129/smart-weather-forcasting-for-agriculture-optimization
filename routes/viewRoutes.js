@@ -6,6 +6,7 @@ const farmController = require('../controllers/farmController');
 const router = express.Router();
 
 router.get('/Home', authController.isLoggedIn, viewsController.getOverview);
+router.get('/', authController.isLoggedIn, viewsController.getOverview);
 router.get('/login', authController.isLoggedIn, viewsController.getLoginForm);
 router.get('/logout', authController.logout, viewsController.getOverview);
 router.get('/signup', authController.isLoggedIn, viewsController.getSignupForm);
